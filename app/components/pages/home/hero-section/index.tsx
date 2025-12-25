@@ -1,3 +1,5 @@
+'use client'
+
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Image from "next/image";
 import { Button } from "../../../button/index";
@@ -53,26 +55,30 @@ const MOCK_TECHNOLOGIES = [
   { name: "Linux (Terminal)" },
 ];
 
-
 export const HeroSection = () => {
+  const handleContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
         <div className="w-full lg:max-w-[530px]">
           <p className="font-mono text-emerald-400">Olá, meu nome é</p>
           <h2 className="text-4xl font-medium mt-2">Rafael Brito</h2>
-          <p className="text-gray-400 my-6 text-sm sm:text-base">
-            Desenvolvedor de software com experiência em backend e noções de
+          <p className="text-gray-400 my-6 text-sm sm:text-base"> Desenvolvedor de software com experiência em backend e noções de
             frontend, focado em criar soluções funcionais, integrações e
-            aplicações web bem estruturadas.
-          </p>
+            aplicações web bem estruturadas. </p>
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
             {MOCK_TECHNOLOGIES.map((technologies, index) => (
               <TechBadge name={technologies.name} />
             ))}
           </div>
           <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
-            <Button className="w-max shadow-button">
+            <Button className="w-max shadow-button" onClick={handleContact}>
               Entre em contato
               <HiArrowNarrowRight size={18} />
             </Button>
