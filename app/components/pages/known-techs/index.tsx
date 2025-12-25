@@ -1,7 +1,7 @@
 import { FaJava } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io5";
 import { TbBrandJavascript } from "react-icons/tb";
-import { SiN8N, SiSpringboot, SiPostgresql, SiMysql } from "react-icons/si";
+import { SiSpringboot, SiPostgresql, SiMysql } from "react-icons/si";
 
 import { SectionTitle } from "@/app/components/section-title";
 import { KnownTech } from "./known-tech";
@@ -13,7 +13,6 @@ const techs = [
   { icon: <SiSpringboot className="text-2xl" />, name: "Spring Boot", startDate: "2025-08-01" },
   { icon: <SiPostgresql className="text-2xl" />, name: "PostgreSQL", startDate: "2024-09-01" },
   { icon: <SiMysql className="text-2xl" />, name: "MySQL", startDate: "2024-07-01" },
-  { icon: <SiN8N className="text-2xl" />, name: "n8n", startDate: "2025-10-01" },
 ];
 
 
