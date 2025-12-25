@@ -22,8 +22,8 @@ export const Header = () => {
         <Link href="/">
           <Image
             src="/images/logo.png"
-            width={58}
-            height={49}
+            width={68}
+            height={59}
             alt="Logo GB Dev"
           />
         </Link>

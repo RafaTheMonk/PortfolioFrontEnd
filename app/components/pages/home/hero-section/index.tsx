@@ -1,7 +1,7 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Image from "next/image";
-import { Button } from "../../button/index";
-import { TechBadge } from "../../tech-badge";
+import { Button } from "../../../button/index";
+import { TechBadge } from "../../../tech-badge";
 import {
   TbBrandGithub,
   TbBrandLinkedin,
@@ -22,11 +22,37 @@ const MOCK_CONTACTS = [
     url: "https://wa.me/5571988904263",
     icon: <TbBrandWhatsapp />,
   },
-  { 
-    url: "https://www.instagram.com/rafaelbrito.dev/", 
-    icon: <TbBrandInstagram /> 
+  {
+    url: "https://www.instagram.com/rafaelbrito.dev/",
+    icon: <TbBrandInstagram />,
   },
 ];
+
+const MOCK_TECHNOLOGIES = [
+  // Backend & Integrações
+  { name: "Java" },
+  { name: "Spring Boot" },
+  { name: "Node.js" },
+  { name: "n8n" },
+
+  // Dados
+  { name: "SQL" },
+  { name: "PostgreSQL" },
+  { name: "MySQL" },
+
+  // Front-end (base e portfolio)
+  { name: "JavaScript" },
+  { name: "TypeScript" },
+  { name: "HTML/CSS" },
+  { name: "React" },
+  { name: "Next.js" },
+  { name: "Tailwind CSS" },
+
+  // Ferramentas
+  { name: "Git/GitHub" },
+  { name: "Linux (Terminal)" },
+];
+
 
 export const HeroSection = () => {
   return (
@@ -41,8 +67,8 @@ export const HeroSection = () => {
             aplicações web bem estruturadas.
           </p>
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
-            {Array.from({ length: 7 }).map((_, index) => (
-              <TechBadge name="Next.js" />
+            {MOCK_TECHNOLOGIES.map((technologies, index) => (
+              <TechBadge name={technologies.name} />
             ))}
           </div>
           <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
@@ -69,7 +95,7 @@ export const HeroSection = () => {
           width={420}
           height={404}
           alt="Foto de perfil do portifólio"
-          className="w-[400px] h-[400px] lg:w-[420px] lg:h[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover object-[center_20%]"
+          className="w-[390px] h-[390px] lg:w-[420px] lg:h[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover"
         />
       </div>
     </section>
