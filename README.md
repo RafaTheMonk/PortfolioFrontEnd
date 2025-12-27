@@ -1,6 +1,6 @@
 # Portfolio Front-End
 
-Portfólio pessoal desenvolvido com **Next.js 13** e **React**, com foco em apresentar minha trajetória, conhecimentos técnicos e projetos.
+Portfólio pessoal desenvolvido com **Next.js** e **React**, com foco em apresentar minha trajetória, conhecimentos técnicos e projetos.
 
 > Status: em desenvolvimento 🚧
 
@@ -8,7 +8,7 @@ Portfólio pessoal desenvolvido com **Next.js 13** e **React**, com foco em apre
 Projeto de portfólio com layout responsivo, código organizado por componentes e foco em performance e boas práticas do ecossistema Next.js.
 
 ## Tecnologias
-- Next.js 13 (App Router)
+- Next.js
 - React
 - TypeScript
 - Tailwind CSS
